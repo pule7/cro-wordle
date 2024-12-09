@@ -1,11 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    
-</body>
+    <link rel="stylesheet" href="index.css" />
+    <script src="index.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>CroWordle</h1>
+    </header>
+    <main>
+      <h2>Igraj CroWordle!</h2>
+      <div>
+        <label for="user-input">Upiši riječ koja sadrži 5 slova! Dozvoljena su samo slova hrvatske abecede!</label>
+        <input type="text" id="user-input" maxlength="5" required/>
+        <p id="warning1">Riječ mora imati točno 5 slova!</p>
+        <p id="warning2">Dozvoljena su samo slova hrvatske abecede! Molimo ispravite!</p>
+        <button>Unesi na ploču</button>
+      </div>
+      <ul id="game-board">
+        <li data-row="0" data-col="0"></li>
+        <li data-row="0" data-col="1"></li>
+        <li data-row="0" data-col="2"></li>
+        <li data-row="0" data-col="3"></li>
+        <li data-row="0" data-col="4"></li>
+
+        <li data-row="1" data-col="0"></li>
+        <li data-row="1" data-col="1"></li>
+        <li data-row="1" data-col="2"></li>
+        <li data-row="1" data-col="3"></li>
+        <li data-row="1" data-col="4"></li>
+
+        <li data-row="2" data-col="0"></li>
+        <li data-row="2" data-col="1"></li>
+        <li data-row="2" data-col="2"></li>
+        <li data-row="2" data-col="3"></li>
+        <li data-row="2" data-col="4"></li>
+
+        <li data-row="3" data-col="0"></li>
+        <li data-row="3" data-col="1"></li>
+        <li data-row="3" data-col="2"></li>
+        <li data-row="3" data-col="3"></li>
+        <li data-row="3" data-col="4"></li>
+
+        <li data-row="4" data-col="0"></li>
+        <li data-row="4" data-col="1"></li>
+        <li data-row="4" data-col="2"></li>
+        <li data-row="4" data-col="3"></li>
+        <li data-row="4" data-col="4"></li>
+
+        <li data-row="5" data-col="0"></li>
+        <li data-row="5" data-col="1"></li>
+        <li data-row="5" data-col="2"></li>
+        <li data-row="5" data-col="3"></li>
+        <li data-row="5" data-col="4"></li>
+      </ul>
+    </main>
+    <footer></footer>
+  </body>
 </html>
