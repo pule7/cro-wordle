@@ -4,7 +4,7 @@ body {
 }
 
 header {
-  background-color: rgb(205, 164, 244);
+  background-color: rgb(183, 120, 243);
   width: 100%;
   height: 10rem;
   align-content: center;
@@ -13,43 +13,54 @@ header {
 }
 
 h2 {
-  margin: 4rem;
+  margin: 1rem;
   color: grey;
+}
+
+#explanationParagraph {
+  margin-bottom: 0;
 }
 
 label {
   display: block;
-  margin-top: 2rem;
-  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+  font-size: 1.5rem;
+  color: rgb(63, 62, 62);
 }
 
 input {
   text-transform: uppercase;
+  border: 2px solid grey;
+  border-radius: 8px;
+  height: 2rem;
+  width: 10rem;
 }
 
 button {
   display: block;
   margin: 0.5rem auto;
+  cursor: pointer;
 }
 
 #game-board {
   display: grid;
   list-style: none;
-  width: 40rem;
-  height: 40rem;
-  margin: 2rem auto;
+  width: 28rem;
+  height: 28rem;
+  margin: 1.5rem auto;
   padding: 0;
   gap: 1rem;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
 
 #game-board li {
-  background-color: rgb(205, 164, 244);
   color: white;
   text-align: center;
   align-content: center;
   font-size: 2rem;
   text-transform: uppercase;
+  border-radius: 8px;
   line-height: 0%;
 }
 
@@ -65,4 +76,16 @@ button {
   background-color: red;
   margin: 1rem auto;
   width: 30%;
+}
+
+.grey {
+  background-color: rgb(222, 220, 220);
+}
+
+.matching-purple {
+  background-color: rgb(183, 120, 243);
+}
+
+.includes-purple {
+  background-color: rgb(217, 189, 243);
 }
