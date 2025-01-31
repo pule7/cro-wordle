@@ -8,19 +8,42 @@
     <script src="index.js" defer></script>
   </head>
   <body>
+    <div id="backdrop"></div>
     <header>
       <h1>CroWordle</h1>
     </header>
     <main>
-      <h2>Igraj CroWordle!</h2>
+      <button id="game-logic-btn">
+        Klikni ovdje da bi razumio pravila igre!
+      </button>
       <div id="explanation-div">
-        <p id="explanationParagraph">Upiši riječ koja sadrži 5 slova! Dozvoljena su samo slova hrvatske abecede!</p>
+        <p id="explanation-paragraph">
+          Zadana je peteroslovna hrvatska riječ - "riječ dana". U input polje
+          unesi peteroslovnu riječ. Nakon što pritisneš gumb "Unesi na ploču",
+          tvoja će se riječ upisati u red na ploči. Ukoliko je boja iza slova
+          tamno-ljubičasta, to znači da se slovo nalazi na pravom mjestu u
+          riječi dana. Ukoliko je boja iza slova svijetlo-ljubičasta, riječ dana
+          sadrži to slovo, ali ne na tom mjestu u riječi dana. Ukoliko je
+          pozadina slova siva - riječ dana ne sadrži to slovo. Klikni na crnu
+          pozadinu da se vratiš na igru!
+        </p>
         <label for="user-input"><span id="span-number">1</span>. riječ</label>
-        <input type="text" id="user-input" maxlength="5" required/>
+        <input type="text" id="user-input" required />
         <p id="warning1">Riječ mora imati točno 5 slova!</p>
-        <p id="warning2">Dozvoljena su samo slova hrvatske abecede! Molimo ispravite!</p>
-        <button>Unesi na ploču</button>
+        <p id="warning2">
+          Dozvoljena su samo slova hrvatske abecede! Molimo ispravite!
+        </p>
+        <button id="write-to-board-btn">Unesi na ploču</button>
       </div>
+      <p id="congrats-paragraph">
+        Bravo, pogodio si traženu riječ u
+        <span id="number-of-guesses"></span>. pokušaju!
+      </p>
+      <p id="didnt-find-word-paragraph">
+        Više sreće drugi put, tražena riječ je
+        <span id="word-of-the-day"></span>.
+      </p>
+      <button id="restart-btn">IGRAJ PONOVNO</button>
       <ul id="game-board">
         <li data-row="0" data-col="0"></li>
         <li data-row="0" data-col="1"></li>
@@ -58,6 +81,45 @@
         <li data-row="5" data-col="3"></li>
         <li data-row="5" data-col="4"></li>
       </ul>
+      <aside>
+        <ul>
+          <li>a</li>
+          <li>b</li>
+          <li>c</li>
+          <li>č</li>
+          <li>ć</li>
+
+          <li>d</li>
+          <li>dž</li>
+          <li>đ</li>
+          <li>e</li>
+          <li>f</li>
+
+          <li>g</li>
+          <li>h</li>
+          <li>i</li>
+          <li>j</li>
+          <li>k</li>
+
+          <li>l</li>
+          <li>lj</li>
+          <li>m</li>
+          <li>n</li>
+          <li>nj</li>
+
+          <li>o</li>
+          <li>p</li>
+          <li>r</li>
+          <li>s</li>
+          <li>š</li>
+
+          <li>t</li>
+          <li>u</li>
+          <li>v</li>
+          <li>z</li>
+          <li>ž</li>
+        </ul>
+      </aside>
     </main>
     <footer></footer>
   </body>
